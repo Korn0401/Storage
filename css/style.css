@@ -1,16 +1,147 @@
-/* すべてのページに適用される設定 */
-html{
-	font-size: 16px;
-	font-family: sans-serif;
-}
-*{
-	box-sizing: border-box;
-}
-body{
-	margin: 0 0 0 0;
+body {
+	background-color: #121212;
+	color: #e0e0e0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
 }
 
-/* モバイル対応 */
-@media(max-width: 767px){
-	
+a {
+	color: #4dd0e1;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+a:hover {
+	color: #00bcd4;
+}
+
+.header {
+	background-color: #1f1f1f;
+	padding: 1em 2em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #333;
+}
+.header a {
+	color: #ffffff;
+	font-size: 1.5em;
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+	gap: 2em;
+	margin: 0;
+	padding: 0;
+}
+.nav li {
+	display: inline;
+}
+.nav a {
+	color: #cccccc;
+	font-weight: bold;
+}
+.nav a:hover {
+	color: #ffffff;
+}
+
+h1, h2 {
+	text-align: center;
+	color: #ffffff;
+	margin-top: 1.5em;
+}
+
+main {
+	padding: 2em;
+	max-width: 800px;
+	margin: auto;
+}
+main ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+main ul li {
+	margin-bottom: 0.5em;
+}
+
+footer {
+	text-align: center;
+	padding: 2em;
+	background-color: #1a1a1a;
+	color: #777;
+	font-size: 0.9em;
+	border-top: 1px solid #333;
+}
+
+a[download] {
+	display: inline-block;
+	margin-top: 1em;
+	padding: 0.5em 1em;
+	background-color: #333;
+	border: 1px solid #555;
+	border-radius: 4px;
+	color: #e0e0e0;
+	text-align: center;
+}
+a[download]:hover {
+	background-color: #444;
+	border-color: #777;
+}
+
+main img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1em auto;
+	max-height: 400px; 
+}
+
+main ul li a {
+	display: block;
+	background-color: #1e1e1e;
+	padding: 0.8em 1.2em;
+	border: 1px solid #333;
+	border-radius: 8px;
+	color: #4dd0e1;
+	font-weight: bold;
+	transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+main ul li a:hover {
+	background-color: #2c2c2c;
+	color: #00bcd4;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 600px) {
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.nav ul {
+		flex-direction: column;
+		gap: 1em;
+		margin-top: 1em;
+	}
+
+	main {
+		padding: 1em;
+	}
+
+	h1, h2 {
+		font-size: 1.5em;
+	}
+
+	main ul li a {
+		font-size: 1.1em;
+		padding: 1em;
+	}
+
+	.header a {
+		font-size: 1.2em;
+	}
 }
